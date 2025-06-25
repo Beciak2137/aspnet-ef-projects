@@ -1,0 +1,31 @@
+@APBD9_HostAddress = http://localhost:5137
+
+GET {{APBD9_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET http://localhost:5137/Patient/1
+###
+POST http://localhost:5137/Patient
+Content-Type: application/json
+
+{
+  "IdDoctor": 1,
+  "patient": {
+    "IdPatient": 3,
+    "FirstName": "Jan",
+    "LastName": "Nowak",
+    "BirthDate": "1990-05-01"
+  },
+  "medicaments": [
+    {
+      "idMedicament": 1,
+      "dose": 2,
+      "description": "BBBB"
+    }
+  ],
+  "date": "2025-05-26",
+  "dueDate": "2025-06-10"
+}
+
+
